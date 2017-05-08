@@ -1,7 +1,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Send Message</string>
     <string name="label_input_phone_number">Please input phone number: </string>
-    <string name="label_ex_phone_number">ext: 0901234567</string>
+    <string name="label_ex_phone_number">ext: 0906512162</string>
     <string name="action_start">Start</string>
     <string name="action_send">Send</string>
 

@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_alert.png",
-        "source": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_alert.png"
-    },
-    {
-        "merged": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ic_alert.png",
-        "source": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ic_alert.png"
+        "merged": "D:\\NgocBinh\\MySource\\SendMessage\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ic_alert.png",
+        "source": "D:\\NgocBinh\\MySource\\SendMessage\\library\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ic_alert.png"
     }
 ]

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/src/release/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\NgocBinh\MySource\SendMessage\library\src\main\jniLibs"/></dataSet><dataSet config="release"><source path="D:\NgocBinh\MySource\SendMessage\library\src\release\jniLibs"/></dataSet></merger>

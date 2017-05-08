@@ -1,18 +1,10 @@
 [
     {
-        "merged": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/res/merged/androidTest/debug/xml/apns.xml",
-        "source": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/xml/apns.xml"
+        "merged": "D:\\NgocBinh\\MySource\\SendMessage\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\apns.xml",
+        "source": "D:\\NgocBinh\\MySource\\SendMessage\\library\\build\\intermediates\\bundles\\debug\\res\\xml\\apns.xml"
     },
     {
-        "merged": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/res/merged/androidTest/debug/xml/mms_config.xml",
-        "source": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/xml/mms_config.xml"
-    },
-    {
-        "merged": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/res/merged/androidTest/debug/xml/apns.xml",
-        "source": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/xml/apns.xml"
-    },
-    {
-        "merged": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/res/merged/androidTest/debug/xml/mms_config.xml",
-        "source": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/xml/mms_config.xml"
+        "merged": "D:\\NgocBinh\\MySource\\SendMessage\\library\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\mms_config.xml",
+        "source": "D:\\NgocBinh\\MySource\\SendMessage\\library\\build\\intermediates\\bundles\\debug\\res\\xml\\mms_config.xml"
     }
 ]

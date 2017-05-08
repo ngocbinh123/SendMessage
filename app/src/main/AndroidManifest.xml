@@ -18,6 +18,10 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_app"
@@ -28,7 +32,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <action android:name="android.intent.action.SENDTO" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
@@ -44,15 +47,50 @@
 
         </activity>
         <activity android:name=".activity.PermissionActivity"></activity>
-        <activity android:name=".activity.ChatRoomActivity">
-        </activity>
-        <service android:name="com.android.mms.transaction.TransactionService"/>
-        <receiver
-            android:name="com.klinker.android.send_message.SentReceiver"
-            android:taskAffinity="hcm.nnbinh.sendmessage.SMS_SENT"/>
+        <activity android:name=".activity.ChatRoomActivity"></activity>
+
+        <service android:name="com.android.mms.transaction.TransactionService" />
 
         <receiver
-            android:name="com.klinker.android.send_message.DeliveredReceiver"
-            android:taskAffinity="hcm.nnbinh.sendmessage.SMS_DELIVERED"/>
+            android:name=".service.SmsReceiver"
+            android:permission="android.permission.BROADCAST_SMS" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.MmsReceiver"
+            android:permission="android.permission.BROADCAST_WAP_PUSH" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+                <data android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.klinker.android.send_message.MmsSentReceiver">
+            <intent-filter>
+                <action android:name="com.klinker.android.messaging.MMS_SENT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.klinker.android.send_message.MmsReceivedReceiver">
+            <intent-filter>
+                <action android:name="com.klinker.android.messaging.MMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.HeadlessSmsSendService"
+            android:exported="true"
+            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE" >
+            <intent-filter>
+                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </service>
     </application>
 </manifest>
