@@ -15,6 +15,10 @@ allprojects {
     repositories {
         jcenter()
     }
+
+    project.ext {
+        appName = 'SendMessage'
+    }
 }
 
 task clean(type: Delete) {

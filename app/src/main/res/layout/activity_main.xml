@@ -4,14 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_vertical"
-    android:layout_margin="10dp">
+    android:padding="10dp"
+    android:background="@color/colorWhite">
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:src="@mipmap/ic_app"/>
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/label_input_phone_number" />
+        android:text="@string/label_input_phone_number"
+        style="@style/tv_title"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,11 +31,15 @@
         android:hint="@string/label_ex_phone_number"
         android:padding="10dp"
         android:layout_margin="10dp"
-        android:text="01289115237"/>
+        android:maxLength="11"
+        android:maxLines="1"
+        android:inputType="phone"
+        android:textSize="20sp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/action_start"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:id="@+id/act_start" />
 </LinearLayout>

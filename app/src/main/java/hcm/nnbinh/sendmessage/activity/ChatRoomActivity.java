@@ -5,25 +5,23 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.EditText;
+import android.widget.ImageView;
 
-import com.droidprism.APN;
-import com.google.android.mms.*;
 import com.klinker.android.send_message.ApnUtils;
 import com.klinker.android.send_message.Message;
 import com.klinker.android.send_message.Settings;
 import com.klinker.android.send_message.Transaction;
 import com.droidprism.*;
-import java.io.File;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,24 +29,28 @@ import butterknife.OnClick;
 import hcm.nnbinh.sendmessage.MMS.SettingApp;
 import hcm.nnbinh.sendmessage.MainActivity;
 import hcm.nnbinh.sendmessage.R;
-import hcm.nnbinh.sendmessage.sqlite.APNModel;
-import hcm.nnbinh.sendmessage.sqlite.DatabaseHelper;
+import hcm.nnbinh.sendmessage.MMS.APNModel;
 
 /**
  * Created by nguyenngocbinh on 4/29/17.
  */
 
-public class ChatRoomActivity extends AppCompatActivity {
-    private final static String TAG = "ChatRoomActivity";
+public class ChatRoomActivity extends BaseActivity {
+    private final static String TAG = ChatRoomActivity.class.getName();
     private static final int PICK_PHOTO_FOR_AVATAR = 111;
-    @BindView(R.id.txt_sms)
-    EditText txtSMS;
+    private String mImagePath = "";
     private String mPhoneNumber = "";
     private SmsManager mManager;
     private SettingApp settingApp;
-    private int count = 1;
+
     private  int mcc = 0;
     private  int mnc = 0;
+
+    @BindView(R.id.txt_sms)
+    EditText txtSMS;
+
+    @BindView(R.id.act_add_image)
+    ImageView actAddImage;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,22 +75,29 @@ public class ChatRoomActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICK_PHOTO_FOR_AVATAR && resultCode == RESULT_OK) {
-            if (data == null) {
-                //Display an error
-                Log.d(TAG, "SEND MSS: can not pick image");
+        if (requestCode == PICK_PHOTO_FOR_AVATAR) {
+            if (resultCode == RESULT_OK && data != null) {
+                mImagePath = getImageFromUri(data.getData());
+                loadImageQuickly(mImagePath,actAddImage);
+                Log.d(TAG, "SEND MSS: picked image: " + mImagePath);
+            }else {
+                clearImageView();
                 return;
             }
-            String path= getImageFromUri(data.getData());
-            Log.d(TAG, "SEND MSS: picked image: " + path);
-            txtSMS.setText("send MSS " + String.valueOf(count++));
-            //sendData(path);
-            sendMMS(path);
-           }
+        }
     }
 
     @OnClick(R.id.act_send)
-    void sendSMS() {
+    void sendMessage() {
+        if (mImagePath == "")
+            sendSMS();
+        else
+            sendMMS(mImagePath, txtSMS.getText().toString());
+        refreshUI();
+
+    }
+
+    private void sendSMS() {
         String message = txtSMS.getText().toString();
         mManager.sendTextMessage(mPhoneNumber, null, message, null, null);
     }
@@ -97,16 +106,6 @@ public class ChatRoomActivity extends AppCompatActivity {
     void onClickChooseImage() {
         pickImage();
     }
-//
-//    private void sendMMS(String imagePath) {
-//        Uri uri = Uri.parse(imagePath);
-//        Intent i = new Intent(Intent.ACTION_SEND);
-//        i.putExtra("address",mPhoneNumber);
-//        i.putExtra("sms_body","This is the text mms");
-//        i.putExtra(Intent.EXTRA_STREAM,"file:/"+uri);
-//        i.setType("image/png");
-//        startActivity(i);
-//    }
 
     public void pickImage() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
@@ -157,20 +156,25 @@ public class ChatRoomActivity extends AppCompatActivity {
         return apn;
     }
 
-    public void sendData(String imagePath){
-        Intent mmsIntent = new Intent(Intent.ACTION_SEND);
-        mmsIntent.putExtra("sms_body", "text");
-        mmsIntent.putExtra("address", mPhoneNumber);
-        mmsIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(imagePath)));
-        mmsIntent.setType("image/jpeg");
-        startActivity(Intent.createChooser(mmsIntent, "Send"));
-
-    }
-
-    private void sendMMS(final String imagePath) {
-        new Thread(new Runnable() {
+    private void refreshUI() {
+        runOnUiThread(new Runnable() {
             @Override
             public void run() {
+                clearImageView();
+                txtSMS.setText("");
+            }
+        });
+    }
+
+    private void clearImageView() {
+        mImagePath = "";
+        actAddImage.setImageResource(R.mipmap.ic_camera);
+    }
+
+    private void sendMMS(final String imagePath, final String content) {
+        new AsyncTask<Void, Void, Void>(){
+            @Override
+            protected Void doInBackground(Void... params) {
                 Settings sendSettings = new Settings();
                 APNModel apn = getApn();
                 sendSettings.setMmsc(apn.getMmsc());
@@ -181,11 +185,19 @@ public class ChatRoomActivity extends AppCompatActivity {
 
                 Transaction transaction = new Transaction(ChatRoomActivity.this,sendSettings);
 
-                Message message = new Message(txtSMS.getText().toString(), mPhoneNumber);
+                Message message = new Message(content, mPhoneNumber);
                 Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
                 message.setImage(bitmap);
                 transaction.sendNewMessage(message, Transaction.NO_THREAD_ID);
+                return null;
             }
-        }).start();
+
+            @Override
+            protected void onPostExecute(Void aVoid) {
+                super.onPostExecute(aVoid);
+                showNotification(getString(R.string.noti_sent_complete));
+                refreshUI();
+            }
+        }.execute();
     }
 }
