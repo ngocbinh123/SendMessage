@@ -1,0 +1,708 @@
+[
+    {
+        "outputFile": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 69,
+                    "endOffset": 170
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 105,
+                        "endColumn": 69,
+                        "endOffset": 170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 175,
+                    "endLine": 4,
+                    "endColumn": 32,
+                    "endOffset": 324
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 175,
+                        "endLine": 4,
+                        "endColumn": 32,
+                        "endOffset": 324
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 329,
+                    "endLine": 10,
+                    "endColumn": 58,
+                    "endOffset": 947
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 329,
+                        "endLine": 10,
+                        "endColumn": 58,
+                        "endOffset": 947
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 952,
+                    "endColumn": 147,
+                    "endOffset": 1095
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 952,
+                        "endColumn": 147,
+                        "endOffset": 1095
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1100,
+                    "endColumn": 86,
+                    "endOffset": 1182
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1100,
+                        "endColumn": 86,
+                        "endOffset": 1182
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1187,
+                    "endColumn": 39,
+                    "endOffset": 1222
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1187,
+                        "endColumn": 39,
+                        "endOffset": 1222
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1227,
+                    "endColumn": 76,
+                    "endOffset": 1299
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1227,
+                        "endColumn": 76,
+                        "endOffset": 1299
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1304,
+                    "endColumn": 63,
+                    "endOffset": 1363
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1304,
+                        "endColumn": 63,
+                        "endOffset": 1363
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1368,
+                    "endColumn": 71,
+                    "endOffset": 1435
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1368,
+                        "endColumn": 71,
+                        "endOffset": 1435
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1440,
+                    "endColumn": 130,
+                    "endOffset": 1566
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1440,
+                        "endColumn": 130,
+                        "endOffset": 1566
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1571,
+                    "endColumn": 99,
+                    "endOffset": 1666
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1571,
+                        "endColumn": 99,
+                        "endOffset": 1666
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1671,
+                    "endColumn": 51,
+                    "endOffset": 1718
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1671,
+                        "endColumn": 51,
+                        "endOffset": 1718
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1723,
+                    "endColumn": 33,
+                    "endOffset": 1752
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1723,
+                        "endColumn": 33,
+                        "endOffset": 1752
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1757,
+                    "endColumn": 87,
+                    "endOffset": 1840
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1757,
+                        "endColumn": 87,
+                        "endOffset": 1840
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1845,
+                    "endColumn": 90,
+                    "endOffset": 1931
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1845,
+                        "endColumn": 90,
+                        "endOffset": 1931
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1936,
+                    "endColumn": 83,
+                    "endOffset": 2015
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1936,
+                        "endColumn": 83,
+                        "endOffset": 2015
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2020,
+                    "endColumn": 57,
+                    "endOffset": 2073
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 2020,
+                        "endColumn": 57,
+                        "endOffset": 2073
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2078,
+                    "endLine": 27,
+                    "endColumn": 144,
+                    "endOffset": 2508
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 2078,
+                        "endLine": 27,
+                        "endColumn": 144,
+                        "endOffset": 2508
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 69,
+                    "endOffset": 170
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 105,
+                        "endColumn": 69,
+                        "endOffset": 170
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 175,
+                    "endLine": 4,
+                    "endColumn": 32,
+                    "endOffset": 324
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 175,
+                        "endLine": 4,
+                        "endColumn": 32,
+                        "endOffset": 324
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 329,
+                    "endLine": 10,
+                    "endColumn": 58,
+                    "endOffset": 947
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 329,
+                        "endLine": 10,
+                        "endColumn": 58,
+                        "endOffset": 947
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 952,
+                    "endColumn": 147,
+                    "endOffset": 1095
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 952,
+                        "endColumn": 147,
+                        "endOffset": 1095
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1100,
+                    "endColumn": 86,
+                    "endOffset": 1182
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1100,
+                        "endColumn": 86,
+                        "endOffset": 1182
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1187,
+                    "endColumn": 39,
+                    "endOffset": 1222
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1187,
+                        "endColumn": 39,
+                        "endOffset": 1222
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1227,
+                    "endColumn": 76,
+                    "endOffset": 1299
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1227,
+                        "endColumn": 76,
+                        "endOffset": 1299
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1304,
+                    "endColumn": 63,
+                    "endOffset": 1363
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1304,
+                        "endColumn": 63,
+                        "endOffset": 1363
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1368,
+                    "endColumn": 71,
+                    "endOffset": 1435
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1368,
+                        "endColumn": 71,
+                        "endOffset": 1435
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1440,
+                    "endColumn": 130,
+                    "endOffset": 1566
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1440,
+                        "endColumn": 130,
+                        "endOffset": 1566
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1571,
+                    "endColumn": 99,
+                    "endOffset": 1666
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1571,
+                        "endColumn": 99,
+                        "endOffset": 1666
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1671,
+                    "endColumn": 51,
+                    "endOffset": 1718
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1671,
+                        "endColumn": 51,
+                        "endOffset": 1718
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1723,
+                    "endColumn": 33,
+                    "endOffset": 1752
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1723,
+                        "endColumn": 33,
+                        "endOffset": 1752
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1757,
+                    "endColumn": 87,
+                    "endOffset": 1840
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1757,
+                        "endColumn": 87,
+                        "endOffset": 1840
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1845,
+                    "endColumn": 90,
+                    "endOffset": 1931
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1845,
+                        "endColumn": 90,
+                        "endOffset": 1931
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1936,
+                    "endColumn": 83,
+                    "endOffset": 2015
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1936,
+                        "endColumn": 83,
+                        "endOffset": 2015
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2020,
+                    "endColumn": 57,
+                    "endOffset": 2073
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 2020,
+                        "endColumn": 57,
+                        "endOffset": 2073
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2078,
+                    "endLine": 27,
+                    "endColumn": 144,
+                    "endOffset": 2508
+                },
+                "from": {
+                    "file": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 2078,
+                        "endLine": 27,
+                        "endColumn": 144,
+                        "endOffset": 2508
+                    }
+                }
+            }
+        ]
+    }
+]

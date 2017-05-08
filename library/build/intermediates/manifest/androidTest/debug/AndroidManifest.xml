@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.klinker.android.send_message.test" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="25" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.klinker.android.send_message.test"
+        android:targetPackage="com.klinker.android.send_message.test" />
+
+    <application>
+        <uses-library android:name="android.test.runner" />
+
+        <provider
+            android:name="com.klinker.android.send_message.MmsFileProvider"
+            android:authorities="com.klinker.android.send_message.test.MmsFileProvider"
+            android:enabled="true"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+    </application>
+
+</manifest>

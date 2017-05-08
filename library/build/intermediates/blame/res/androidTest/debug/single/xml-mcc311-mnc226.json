@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/res/merged/androidTest/debug/xml-mcc311-mnc226/mms_config.xml",
+        "source": "/Users/nguyenngocbinh/Documents/project/androidLib/android-smsmms/library/build/intermediates/bundles/debug/res/xml-mcc311-mnc226/mms_config.xml"
+    },
+    {
+        "merged": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/res/merged/androidTest/debug/xml-mcc311-mnc226/mms_config.xml",
+        "source": "/Users/nguyenngocbinh/Documents/project/android/SendMessage/library/build/intermediates/bundles/debug/res/xml-mcc311-mnc226/mms_config.xml"
+    }
+]
