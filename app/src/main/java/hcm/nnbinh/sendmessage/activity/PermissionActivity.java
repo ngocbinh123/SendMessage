@@ -11,6 +11,7 @@ import android.provider.Telephony;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ import hcm.nnbinh.sendmessage.MainActivity;
  */
 
 public class PermissionActivity extends AppCompatActivity {
-
+    private static final String TAG = PermissionActivity.class.getName();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +37,9 @@ public class PermissionActivity extends AppCompatActivity {
                     Manifest.permission.CHANGE_NETWORK_STATE
             }, 0);
         }
-
-        if (!getDefaultSmsApp().equals(getPackageName())) {
+        String defaultApp = getDefaultSmsApp();
+        Log.d(TAG,"defaultApp: " +defaultApp + " && app:" + getPackageName());
+        if (!defaultApp.equals(getPackageName())) {
             requestChangeDefaultMessage();
         }
     }
