@@ -1,6 +1,7 @@
 package hcm.nnbinh.sendmessage.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -8,12 +9,13 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.telephony.SmsManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -30,6 +32,8 @@ import hcm.nnbinh.sendmessage.MMS.SettingApp;
 import hcm.nnbinh.sendmessage.MainActivity;
 import hcm.nnbinh.sendmessage.R;
 import hcm.nnbinh.sendmessage.MMS.APNModel;
+
+import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 /**
  * Created by nguyenngocbinh on 4/29/17.
@@ -73,41 +77,102 @@ public class ChatRoomActivity extends BaseActivity {
     }
 
     @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        SharedPreferences shared =  PreferenceManager.getDefaultSharedPreferences(this);
+        switch (requestCode) {
+            case REQUEST_SEND_RECEIVE_SMS:
+                if(grantResults[0] == PERMISSION_GRANTED) {
+                    shared.edit().putBoolean(PERMISSION_SEND_SMS, false).commit();
+                    sendMessage();
+                }else
+                    showNotification(getString(R.string.noti_can_not_send_sms));
+                break;
+            case REQUEST_PHONE_NETWORK:
+                if (grantResults[0] == PERMISSION_GRANTED) {
+                    shared.edit().putBoolean(PERMISSION_SEND_SMS, false).commit();
+                    sendMessage();
+                }else
+                    showNotification(getString(R.string.noti_can_not_send_mms));
+                break;
+            case REQUEST_ALL_PERMISSION:
+                if(grantResults[0] == PERMISSION_GRANTED) {
+                    shared.edit().putBoolean(PERMISSION_SEND_SMS, false)
+                            .putBoolean(PERMISSION_SEND_SMS, false)
+                            .commit();
+                    sendMessage();
+                }else
+                    showNotification(getString(R.string.noti_can_not_send_mms));
+                break;
+            case REQUEST_WRITE_STORAGE:
+                if (grantResults[0]  == PERMISSION_GRANTED)
+                    pickImage();
+                else
+                    showNotification(getString(R.string.noti_can_not_choose_image));
+                break;
+        }
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICK_PHOTO_FOR_AVATAR) {
-            if (resultCode == RESULT_OK && data != null) {
-                mImagePath = getImageFromUri(data.getData());
-                loadImageQuickly(mImagePath,actAddImage);
-                Log.d(TAG, "SEND MSS: picked image: " + mImagePath);
-            }else {
-                clearImageView();
-                return;
-            }
+        switch (requestCode) {
+            case PICK_PHOTO_FOR_AVATAR:
+                if (resultCode == RESULT_OK && data != null) {
+                    mImagePath = getImageFromUri(data.getData());
+                    loadImageQuickly(mImagePath,actAddImage);
+                }else {
+                    clearImageView();
+                    return;
+                }
+                break;
+
+            case CHANGED_DEFAULT_APP:
+                if (resultCode == RESULT_OK) {
+                    if (isNeedRequestSendSMS() || isNeedRequestPhoneNetwork())
+                        requestPerSendSMS(false);
+                    else
+                        sendMMS(mImagePath, txtSMS.getText().toString());
+                }else
+                    showNotification(getString(R.string.noti_can_not_send_mms));
+                break;
         }
     }
 
     @OnClick(R.id.act_send)
     void sendMessage() {
-        if (mImagePath == "")
-            sendSMS();
-        else
+        if (isSendSMS()) {
+            String content = txtSMS.getText().toString().trim();
+            if (content.isEmpty()) {
+                showNotification(getString(R.string.noti_nothing));
+                return;
+            }
+            if (isNeedRequestSendSMS())
+                requestPerSendSMS(true);
+            else
+                sendSMS();
+        } else if (isNeedChangeDefaultApp()){
+            requestChangeDefaultApp();
+        }else {
             sendMMS(mImagePath, txtSMS.getText().toString());
-        refreshUI();
-
+        }
     }
 
     private void sendSMS() {
         String message = txtSMS.getText().toString();
         mManager.sendTextMessage(mPhoneNumber, null, message, null, null);
+        refreshUI();
     }
 
     @OnClick(R.id.act_add_image)
     void onClickChooseImage() {
-        pickImage();
+        if (isNeedRequestPerWriteStorage())
+            requestPerWriteStorage();
+        else
+            pickImage();
     }
 
-    public void pickImage() {
+    private void pickImage() {
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         intent.setType("image/*");
         startActivityForResult(intent, PICK_PHOTO_FOR_AVATAR);
@@ -199,5 +264,9 @@ public class ChatRoomActivity extends BaseActivity {
                 refreshUI();
             }
         }.execute();
+    }
+
+    private boolean isSendSMS() {
+        return mImagePath == "" ? true:false;
     }
 }

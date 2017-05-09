@@ -10,5 +10,8 @@
     <string name="error">Error</string>
     <string name="err_set_default_sms_app">You can not send MMS because you not set this app as your default messaging application.</string>
     <string name="noti_sent_complete">Sent Completed</string>
-    
+    <string name="noti_can_not_choose_image">You can\'t choose image because You don\'t have permission</string>
+    <string name="noti_can_not_send_mms">You can\'t send MMS because You don\'t have permission</string>
+    <string name="noti_can_not_send_sms">You can\'t send SMS because You don\'t have permission</string>
+    <string name="noti_nothing">Nothing</string>
 </resources>
